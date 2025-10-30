@@ -9,7 +9,8 @@ import { Inter, Caveat } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const caveat = Caveat({ subsets: ['latin'], variable: '--font-caveat' });
 
-const API_BASE_URL = 'https://nest-todo-v8xx.onrender.com/todos'; // Adjust if your backend is on a different port/host
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_BASE_URL  || 'http://localhost:3000/todo';
+ // Adjust if your backend is on a different port/host
 
 interface Todo {
   id: string;
